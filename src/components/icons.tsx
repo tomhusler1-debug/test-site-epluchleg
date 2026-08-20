@@ -234,6 +234,27 @@ export function IconClose(props: IconProps) {
   );
 }
 
+export function IconKnife(props: IconProps) {
+  return (
+    <svg viewBox="0 0 48 48" {...base} {...props}>
+      <path d="M6 40 30 16c5-5 12-5 12 2 0 5-4 8-8 8L10 42" />
+      <path d="M6 40l4 4" />
+      <path d="M18 28l8 8" />
+    </svg>
+  );
+}
+
+export function IconBox(props: IconProps) {
+  return (
+    <svg viewBox="0 0 48 48" {...base} {...props}>
+      <rect x="8" y="14" width="32" height="26" rx="2" />
+      <path d="M8 22h32" />
+      <path d="M20 14v8M28 14v8" />
+      <path d="M18 30h12" />
+    </svg>
+  );
+}
+
 export const vegIconMap = {
   carrot: IconCarrot,
   celery: IconCelery,

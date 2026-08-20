@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
-import { HeroVisual } from "@/components/HeroVisual";
+import { HeroSection } from "@/components/HeroSection";
 import { GrandEstMap } from "@/components/GrandEstMap";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatCounter } from "@/components/StatCounter";
-import { ProductCard } from "@/components/ProductCard";
 import { SectorCard } from "@/components/SectorCard";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ProcessScroll } from "@/components/ProcessScroll";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
 import {
   IconArrowRight,
@@ -17,7 +18,7 @@ import {
   sectorIconMap,
   vegIconMap,
 } from "@/components/icons";
-import { activities, cities, potatoForms, potatoLines, sectors, stats, vegetables } from "@/lib/data";
+import { activities, potatoForms, potatoLines, sectors, stats, vegetables } from "@/lib/data";
 
 const values = [
   {
@@ -49,78 +50,40 @@ const values = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-cream-200 pb-20 pt-32 sm:pb-28 sm:pt-40">
-        <div
-          aria-hidden
-          className="veg-divider pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-[0.08]"
-        />
-        <div className="container-page grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
-          <div>
-            <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full bg-forest-700/8 px-4 py-1.5 text-sm font-medium text-forest-700">
-                Légumes 4ᵉ &amp; 5ᵉ gamme — spécialiste pomme de terre
-              </span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h1 className="mt-6 text-display-xl font-display font-medium text-ink text-balance">
-                Le légume transformé,
-                <br />
-                <span className="italic text-forest-700">prêt à l&apos;emploi.</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-                EPLUCH&apos;LEG épluche, découpe et prépare pommes de terre et légumes frais pour
-                les professionnels de la restauration et de l&apos;industrie agroalimentaire —
-                de Strasbourg à Metz.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button href="/contact">Demander un devis</Button>
-                <Button href="/produits" variant="ghost">
-                  Découvrir nos produits
-                </Button>
-              </div>
-            </Reveal>
-            <Reveal delay={0.4}>
-              <div className="mt-14 flex flex-wrap items-center gap-x-3 gap-y-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-ink-muted/70">
-                  Zone d&apos;intervention
-                </span>
-                {cities.map((c) => (
-                  <span
-                    key={c.name}
-                    className="rounded-full border border-forest-700/15 bg-cream-50 px-3 py-1 text-xs font-medium text-ink-light"
-                  >
-                    {c.name}
-                  </span>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.15} y={30}>
-            <HeroVisual />
-          </Reveal>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* ACTIVITÉS */}
-      <section className="border-y border-forest-700/8 bg-forest-800 py-6">
-        <div className="container-page overflow-hidden">
-          <div className="flex animate-marquee gap-10 whitespace-nowrap">
+      <section className="group border-y border-forest-700/8 bg-forest-800 py-7">
+        <div
+          className="overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+          }}
+        >
+          <div className="flex w-max animate-marquee gap-12 whitespace-nowrap group-hover:[animation-play-state:paused]">
             {[...activities, ...activities].map((a, i) => (
               <span
                 key={`${a}-${i}`}
-                className="flex items-center gap-3 text-sm font-medium text-cream-300/80"
+                className="flex items-center gap-3 font-display text-base italic text-cream-200/90 sm:text-lg"
               >
-                <IconCheck className="h-4 w-4 text-clay-300" />
+                <IconCheck className="h-4 w-4 shrink-0 not-italic text-clay-300" />
                 {a}
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PULL QUOTE */}
+      <section className="bg-cream-200 py-28 sm:py-36">
+        <div className="container-page">
+          <ScrollReveal
+            text="Le légume mérite mieux qu'un simple épluchage — de la précision, de la régularité, et un respect total de sa fraîcheur, du champ jusqu'à votre cuisine."
+            className="max-w-4xl font-display text-3xl font-medium leading-[1.25] text-ink text-balance sm:text-4xl lg:text-5xl"
+          />
         </div>
       </section>
 
@@ -221,6 +184,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProcessScroll />
+
       {/* SECTEURS CLIENTS */}
       <section className="bg-forest-900 py-24 sm:py-32">
         <div className="container-page">
@@ -276,15 +241,28 @@ export default function HomePage() {
             align="center"
             className="mx-auto"
           />
-          <StaggerGroup className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <StaggerItem key={v.title}>
-                <div className="h-full rounded-xl2 bg-cream-50 p-7 shadow-soft">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-clay-400/10 text-clay-400">
-                    <v.icon className="h-6 w-6" />
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12">
+            {values.map((v, i) => (
+              <StaggerItem
+                key={v.title}
+                className={i % 2 === 0 ? "lg:col-span-7" : "lg:col-span-5"}
+              >
+                <div className="group relative h-full overflow-hidden rounded-xl3 bg-cream-50 p-8 shadow-soft transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-lifted sm:p-10">
+                  <span
+                    aria-hidden
+                    className="absolute -right-6 -top-6 text-clay-400/[0.07] transition-transform duration-500 ease-premium group-hover:scale-110 group-hover:rotate-6"
+                  >
+                    <v.icon className="h-32 w-32" />
                   </span>
-                  <h3 className="mt-6 font-display text-lg font-medium text-ink">{v.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-ink-muted">{v.description}</p>
+                  <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-clay-400/10 text-clay-400">
+                    <v.icon className="h-7 w-7" />
+                  </span>
+                  <h3 className="relative mt-7 font-display text-2xl font-medium text-ink">
+                    {v.title}
+                  </h3>
+                  <p className="relative mt-3 max-w-sm leading-relaxed text-ink-muted">
+                    {v.description}
+                  </p>
                 </div>
               </StaggerItem>
             ))}

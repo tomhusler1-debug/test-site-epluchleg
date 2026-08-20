@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { IconArrowRight } from "./icons";
+import { Magnetic } from "./Magnetic";
 
 type ButtonProps = {
   href: string;
@@ -27,14 +28,16 @@ export function Button({
   showArrow = true,
 }: ButtonProps) {
   return (
-    <Link
-      href={href}
-      className={`group inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-[0.95rem] font-medium tracking-tight transition-all duration-300 ease-premium active:scale-[0.97] ${variants[variant]} ${className}`}
-    >
-      {children}
-      {showArrow && (
-        <IconArrowRight className="h-4 w-4 transition-transform duration-300 ease-premium group-hover:translate-x-1" />
-      )}
-    </Link>
+    <Magnetic strength={0.25}>
+      <Link
+        href={href}
+        className={`group inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-[0.95rem] font-medium tracking-tight transition-all duration-300 ease-premium active:scale-[0.97] ${variants[variant]} ${className}`}
+      >
+        {children}
+        {showArrow && (
+          <IconArrowRight className="h-4 w-4 transition-transform duration-300 ease-premium group-hover:translate-x-1" />
+        )}
+      </Link>
+    </Magnetic>
   );
 }

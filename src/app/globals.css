@@ -20,6 +20,16 @@ body {
   color: #F7F4EC;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a,
+  button {
+    cursor: none;
+  }
+}
+
 /* Focus visibility for keyboard users, consistent across all interactive elements */
 a:focus-visible,
 button:focus-visible,

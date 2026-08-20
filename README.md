@@ -4,7 +4,8 @@ Site vitrine B2B pour EPLUCH&apos;LEG, transformateur de légumes 4ᵉ/5ᵉ gamm
 pomme de terre, au service de la restauration collective, commerciale et de l&apos;industrie
 agroalimentaire en Alsace &amp; Grand Est.
 
-Stack : **Next.js 15 (App Router) · TypeScript · Tailwind CSS · Framer Motion**.
+Stack : **Next.js 15 (App Router) · TypeScript · Tailwind CSS · Framer Motion · Lenis** (scroll
+storytelling, typographie cinétique, curseur magnétique, section pinnée "process").
 
 ## Développement local
 
@@ -48,9 +49,11 @@ Certaines informations n'ont pas été fournies et ont été temporairement comp
 site soit complet et cohérent. À vérifier/remplacer avant publication :
 
 - **Coordonnées** (`src/lib/data.ts`) : téléphone, email et adresse sont des valeurs provisoires.
-- **Photographies** : le site utilise actuellement des illustrations vectorielles et compositions
-  graphiques (aucune photo). Ajouter de vraies photos produits/atelier renforcerait encore la
-  crédibilité — structure prête pour les intégrer (composants `HeroVisual`, cards produits).
+- **Photographies** : l'environnement de génération n'a pas d'accès internet, donc le site utilise
+  uniquement des compositions graphiques/animations (aucune photo). Ajouter de vraies photos
+  (atelier, produits, équipe) renforcerait encore la crédibilité — pour les intégrer, remplacer les
+  compositions dans `HeroVisual.tsx` et les sections concernées par des `<Image>` (`next/image`)
+  pointant vers vos fichiers dans `public/`.
 - **Certifications qualité** : la page Entreprise reste volontairement générique sur l'hygiène et
   la qualité (aucune certification — HACCP, IFS, BRC... — n'a été confirmée). À préciser si
   applicable.

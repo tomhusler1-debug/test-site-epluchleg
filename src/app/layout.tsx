@@ -3,6 +3,9 @@ import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { CustomCursor } from "@/components/CustomCursor";
+import { GrainOverlay } from "@/components/GrainOverlay";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -59,9 +62,13 @@ export default function RootLayout({
         >
           Aller au contenu principal
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </SmoothScroll>
+        <GrainOverlay />
+        <CustomCursor />
       </body>
     </html>
   );
