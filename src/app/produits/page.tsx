@@ -31,19 +31,21 @@ export default function ProduitsPage() {
       {/* POMME DE TERRE DETAIL */}
       <section className="bg-cream-100 py-20 sm:py-28">
         <div className="container-page">
-          <div className="flex items-center gap-4">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest-700 text-cream-100">
-              <IconPotato className="h-8 w-8" />
-            </span>
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-clay-500">
-                Activité principale
+          <Reveal>
+            <div className="flex items-center gap-4">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest-700 text-cream-100">
+                <IconPotato className="h-8 w-8" />
               </span>
-              <h2 className="font-display text-2xl font-medium text-ink sm:text-3xl">
-                Pomme de terre
-              </h2>
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-wider text-clay-500">
+                  Activité principale
+                </span>
+                <h2 className="font-display text-2xl font-medium text-ink sm:text-3xl">
+                  Pomme de terre
+                </h2>
+              </div>
             </div>
-          </div>
+          </Reveal>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {potatoLines.map((line, i) => (

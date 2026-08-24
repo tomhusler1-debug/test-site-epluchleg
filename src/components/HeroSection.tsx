@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { Button } from "./Button";
 import { HeroVisual } from "./HeroVisual";
 import { KineticText } from "./KineticText";
@@ -10,11 +10,14 @@ import { cities } from "@/lib/data";
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null);
+  const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const visualY = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const visualScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, 40]);
-  const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  // Scroll-linked motion values bypass MotionConfig's reducedMotion handling,
+  // so the parallax/fade ranges are collapsed to no-ops by hand here.
+  const visualY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 90]);
+  const visualScale = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [1, 0.92]);
+  const contentY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 40]);
+  const fade = useTransform(scrollYProgress, [0, 0.75], prefersReducedMotion ? [1, 1] : [1, 0]);
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-cream-200 pb-20 pt-32 sm:pb-28 sm:pt-40">

@@ -1,16 +1,18 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 
 export function Magnetic({ children, strength = 0.35 }: { children: ReactNode; strength?: number }) {
   const ref = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 200, damping: 15, mass: 0.3 });
   const springY = useSpring(y, { stiffness: 200, damping: 15, mass: 0.3 });
 
   function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (prefersReducedMotion) return;
     const el = ref.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -23,6 +25,10 @@ export function Magnetic({ children, strength = 0.35 }: { children: ReactNode; s
   function handleLeave() {
     x.set(0);
     y.set(0);
+  }
+
+  if (prefersReducedMotion) {
+    return <div className="inline-block">{children}</div>;
   }
 
   return (

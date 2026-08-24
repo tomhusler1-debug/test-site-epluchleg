@@ -22,7 +22,7 @@ export function SectorCard({ icon: Icon, name, description, index }: SectorCardP
         </div>
         <div className="mt-8">
           <h3 className="font-display text-lg font-medium">{name}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-cream-300/75">{description}</p>
+          <p className="mt-2 text-[0.9rem] leading-relaxed text-cream-200/85">{description}</p>
         </div>
       </div>
     </StaggerItem>

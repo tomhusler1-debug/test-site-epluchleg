@@ -39,7 +39,10 @@ const config: Config = {
         ink: {
           DEFAULT: "#1B2118",
           light: "#3C463A",
-          muted: "#6B7568",
+          // Darkened from #6B7568 — the lighter value sat just under 4.5:1
+          // against the cream backgrounds it's used on, failing WCAG AA for
+          // body-sized text. This keeps the muted feel with real contrast.
+          muted: "#5A5145",
         },
       },
       fontFamily: {
