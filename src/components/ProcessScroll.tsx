@@ -50,11 +50,11 @@ export function ProcessScroll() {
   const ActiveIcon = steps[active].icon;
 
   return (
-    <section ref={ref} className="relative bg-forest-900" style={{ height: `${steps.length * 62}vh` }}>
+    <section ref={ref} className="relative bg-ink" style={{ height: `${steps.length * 62}vh` }}>
       <div className="veg-divider pointer-events-none absolute inset-0 opacity-[0.04]" aria-hidden />
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden py-16">
         <div className="container-page">
-          <span className="text-sm font-semibold uppercase tracking-[0.14em] text-clay-200">
+          <span className="text-sm font-semibold uppercase tracking-[0.14em] text-orange-200">
             Notre process
           </span>
           <h2 className="mt-3 max-w-lg text-display-sm font-display font-medium text-cream-50 text-balance">
@@ -78,14 +78,14 @@ export function ProcessScroll() {
                 >
                   <span
                     className={`font-display text-sm transition-colors duration-300 ${
-                      active === i ? "text-clay-300" : "text-cream-100/30"
+                      active === i ? "text-orange-300" : "text-cream-100/30"
                     }`}
                   >
                     {s.n}
                   </span>
                   <span
                     className={`h-px flex-1 max-w-6 transition-all duration-300 ${
-                      active === i ? "bg-clay-300" : "bg-cream-100/20"
+                      active === i ? "bg-orange-300" : "bg-cream-100/20"
                     }`}
                   />
                   <span
@@ -109,11 +109,11 @@ export function ProcessScroll() {
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="flex w-full flex-col gap-6 sm:flex-row sm:items-start"
                 >
-                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-clay-400/15 text-clay-300">
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-orange-500/15 text-orange-300">
                     <ActiveIcon className="h-8 w-8" />
                   </span>
                   <div>
-                    <span className="font-display text-sm text-clay-300 lg:hidden">
+                    <span className="font-display text-sm text-orange-300 lg:hidden">
                       {steps[active].n} — {steps[active].title}
                     </span>
                     <h3 className="hidden font-display text-3xl font-medium text-cream-50 lg:block">
@@ -131,7 +131,7 @@ export function ProcessScroll() {
                   <span
                     key={s.n}
                     className={`h-1 flex-1 rounded-full transition-colors duration-300 ${
-                      active === i ? "bg-clay-300" : "bg-cream-100/15"
+                      active === i ? "bg-orange-300" : "bg-cream-100/15"
                     }`}
                   />
                 ))}

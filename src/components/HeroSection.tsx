@@ -26,12 +26,12 @@ export function HeroSection() {
         <motion.div
           animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0] }}
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-forest-600/20 blur-[100px]"
+          className="absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-beige-400/20 blur-[100px]"
         />
         <motion.div
           animate={{ x: [0, -30, 20, 0], y: [0, 20, -20, 0] }}
           transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute -left-32 top-40 h-96 w-96 rounded-full bg-clay-300/25 blur-[90px]"
+          className="absolute -left-32 top-40 h-96 w-96 rounded-full bg-orange-300/25 blur-[90px]"
         />
         <div className="veg-divider absolute -right-16 -top-16 h-72 w-72 rounded-full opacity-[0.09]" />
       </div>
@@ -39,7 +39,7 @@ export function HeroSection() {
       <motion.div style={{ opacity: fade }} className="container-page grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
         <motion.div style={{ y: contentY }}>
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full bg-forest-700/8 px-4 py-1.5 text-sm font-medium text-forest-700">
+            <span className="inline-flex items-center gap-2 rounded-full bg-beige-200 px-4 py-1.5 text-sm font-medium text-beige-800">
               Légumes 4ᵉ &amp; 5ᵉ gamme — spécialiste pomme de terre
             </span>
           </Reveal>
@@ -50,7 +50,7 @@ export function HeroSection() {
               as="div"
               text="c'est une heure de cuisine en moins."
               delay={0.42}
-              className="italic text-forest-700"
+              className="italic text-orange-600"
             />
           </h1>
 
@@ -78,7 +78,7 @@ export function HeroSection() {
               {cities.map((c) => (
                 <span
                   key={c.name}
-                  className="rounded-full border border-forest-700/15 bg-cream-50 px-3 py-1 text-xs font-medium text-ink-light"
+                  className="rounded-full border border-ink/15 bg-cream-50 px-3 py-1 text-xs font-medium text-ink-light"
                 >
                   {c.name}
                 </span>

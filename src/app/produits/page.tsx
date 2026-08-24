@@ -33,11 +33,11 @@ export default function ProduitsPage() {
         <div className="container-page">
           <Reveal>
             <div className="flex items-center gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-forest-700 text-cream-100">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-ink text-cream-100">
                 <IconPotato className="h-8 w-8" />
               </span>
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-clay-500">
+                <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
                   Activité principale
                 </span>
                 <h2 className="font-display text-2xl font-medium text-ink sm:text-3xl">
@@ -50,8 +50,8 @@ export default function ProduitsPage() {
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {potatoLines.map((line, i) => (
               <Reveal key={line.title} delay={i * 0.1}>
-                <div className="flex h-full flex-col rounded-xl3 border border-forest-700/10 bg-cream-50 p-8 shadow-soft sm:p-10">
-                  <span className="w-fit rounded-full bg-clay-400/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-clay-500">
+                <div className="flex h-full flex-col rounded-xl3 border border-ink/10 bg-cream-50 p-8 shadow-soft sm:p-10">
+                  <span className="w-fit rounded-full bg-orange-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-600">
                     {line.tag}
                   </span>
                   <h3 className="mt-5 font-display text-2xl font-medium text-ink">
@@ -65,7 +65,7 @@ export default function ProduitsPage() {
                       {potatoForms.map((f) => (
                         <span
                           key={f.label}
-                          className="rounded-full border border-forest-700/15 px-3.5 py-1.5 text-sm text-ink-light"
+                          className="rounded-full border border-ink/15 px-3.5 py-1.5 text-sm text-ink-light"
                         >
                           {f.label}
                         </span>
@@ -78,14 +78,14 @@ export default function ProduitsPage() {
           </div>
 
           <Reveal delay={0.2}>
-            <div className="mt-8 rounded-xl2 bg-forest-800 p-8 sm:p-10">
-              <p className="text-sm font-semibold uppercase tracking-wider text-clay-200">
+            <div className="mt-8 rounded-xl2 bg-beige-800 p-8 sm:p-10">
+              <p className="text-sm font-semibold uppercase tracking-wider text-orange-200">
                 Utilisations courantes
               </p>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                 {potatoUseCases.map((u) => (
                   <li key={u} className="flex items-start gap-3 text-cream-200">
-                    <IconCheck className="mt-1 h-4 w-4 shrink-0 text-clay-300" />
+                    <IconCheck className="mt-1 h-4 w-4 shrink-0 text-orange-300" />
                     <span className="leading-snug">{u}</span>
                   </li>
                 ))}
@@ -109,8 +109,8 @@ export default function ProduitsPage() {
               const Icon = vegIconMap[v.icon];
               return (
                 <StaggerItem key={v.slug}>
-                  <div className="group flex h-full flex-col rounded-xl2 border border-forest-700/10 bg-cream-50 p-7 transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-700/8 text-forest-700 transition-colors duration-300 group-hover:bg-forest-700 group-hover:text-cream-100">
+                  <div className="group flex h-full flex-col rounded-xl2 border border-ink/10 bg-cream-50 p-7 transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink/8 text-ink transition-colors duration-300 group-hover:bg-ink group-hover:text-cream-100">
                       <Icon className="h-7 w-7" />
                     </span>
                     <h3 className="mt-6 font-display text-xl font-medium text-ink">{v.name}</h3>
@@ -141,7 +141,7 @@ export default function ProduitsPage() {
             },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 0.08}>
-              <div className="border-t-2 border-clay-400 pt-6">
+              <div className="border-t-2 border-orange-500 pt-6">
                 <h3 className="font-display text-lg font-medium text-ink">{item.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-ink-muted">{item.text}</p>
               </div>

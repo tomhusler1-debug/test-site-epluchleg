@@ -17,13 +17,13 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
         <motion.div
           animate={{ x: [0, 30, -15, 0], y: [0, -20, 15, 0] }}
           transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-forest-600/15 blur-[100px]"
+          className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-beige-400/15 blur-[100px]"
         />
         <div className="veg-divider absolute -left-20 -top-20 h-64 w-64 rounded-full opacity-[0.07]" />
       </div>
       <div className="container-page relative max-w-3xl">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-forest-700/8 px-4 py-1.5 text-sm font-medium text-forest-700">
+          <span className="inline-flex items-center gap-2 rounded-full bg-beige-200 px-4 py-1.5 text-sm font-medium text-beige-800">
             {eyebrow}
           </span>
         </Reveal>

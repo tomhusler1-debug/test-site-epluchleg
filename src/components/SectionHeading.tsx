@@ -21,7 +21,7 @@ export function SectionHeading({
   const isCenter = align === "center";
   const titleColor = tone === "dark" ? "text-ink" : "text-cream-100";
   const descColor = tone === "dark" ? "text-ink-muted" : "text-cream-300/85";
-  const eyebrowColor = tone === "dark" ? "text-clay-500" : "text-clay-200";
+  const eyebrowColor = tone === "dark" ? "text-orange-600" : "text-orange-200";
 
   return (
     <div className={`${isCenter ? "mx-auto text-center" : "text-left"} max-w-2xl ${className}`}>

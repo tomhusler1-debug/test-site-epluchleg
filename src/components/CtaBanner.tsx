@@ -23,7 +23,7 @@ export function CtaBanner({
     <section className="bg-cream-100 py-24 sm:py-28">
       <div className="container-page">
         <Reveal>
-          <div className="relative overflow-hidden rounded-xl3 bg-forest-800 px-8 py-16 text-center sm:px-16 sm:py-20">
+          <div className="relative overflow-hidden rounded-xl3 bg-beige-800 px-8 py-16 text-center sm:px-16 sm:py-20">
             <div
               aria-hidden
               className="veg-divider pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -35,7 +35,7 @@ export function CtaBanner({
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href={primaryHref}
-                className="inline-flex items-center gap-2.5 rounded-full bg-clay-400 px-7 py-3.5 text-sm font-semibold text-cream-50 shadow-lifted transition-transform duration-300 ease-premium hover:scale-[1.03] hover:bg-clay-500 active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 rounded-full bg-orange-500 px-7 py-3.5 text-sm font-semibold text-cream-50 shadow-lifted transition-transform duration-300 ease-premium hover:scale-[1.03] hover:bg-orange-600 active:scale-[0.98]"
               >
                 {primaryLabel}
                 <IconArrowRight className="h-4 w-4" />

@@ -53,7 +53,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ACTIVITÉS */}
-      <section className="group border-y border-forest-700/8 bg-forest-800 py-7">
+      <section className="group border-y border-ink/8 bg-beige-800 py-7">
         <div
           className="overflow-hidden"
           style={{
@@ -69,7 +69,7 @@ export default function HomePage() {
                 key={`${a}-${i}`}
                 className="flex items-center gap-3 font-display text-base italic text-cream-200/90 sm:text-lg"
               >
-                <IconCheck className="h-4 w-4 shrink-0 not-italic text-clay-300" />
+                <IconCheck className="h-4 w-4 shrink-0 not-italic text-orange-300" />
                 {a}
               </span>
             ))}
@@ -92,12 +92,12 @@ export default function HomePage() {
         <div className="container-page">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center lg:gap-20">
             <Reveal>
-              <div className="relative overflow-hidden rounded-xl3 bg-forest-800 p-10 sm:p-14">
+              <div className="relative overflow-hidden rounded-xl3 bg-beige-800 p-10 sm:p-14">
                 <div
                   aria-hidden
                   className="veg-divider pointer-events-none absolute inset-0 opacity-[0.06]"
                 />
-                <span className="inline-flex items-center rounded-full bg-clay-400/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-clay-200">
+                <span className="inline-flex items-center rounded-full bg-orange-500/20 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-200">
                   Activité principale
                 </span>
                 <h3 className="mt-5 font-display text-3xl font-medium text-cream-50 sm:text-4xl">
@@ -125,8 +125,8 @@ export default function HomePage() {
             <div className="space-y-5">
               {potatoLines.map((line, i) => (
                 <Reveal key={line.title} delay={0.1 + i * 0.1}>
-                  <div className="rounded-xl2 border border-forest-700/10 bg-cream-50 p-7 shadow-soft transition-shadow duration-300 hover:shadow-card">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-clay-500">
+                  <div className="rounded-xl2 border border-ink/10 bg-cream-50 p-7 shadow-soft transition-shadow duration-300 hover:shadow-card">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
                       {line.tag}
                     </span>
                     <h4 className="mt-2 font-display text-xl font-medium text-ink">
@@ -139,7 +139,7 @@ export default function HomePage() {
               <Reveal delay={0.3}>
                 <Link
                   href="/produits"
-                  className="group inline-flex items-center gap-2 pt-2 text-sm font-semibold text-forest-700"
+                  className="group inline-flex items-center gap-2 pt-2 text-sm font-semibold text-orange-600"
                 >
                   Voir toute la gamme pomme de terre
                   <IconArrowRight className="h-4 w-4 transition-transform duration-300 ease-premium group-hover:translate-x-1" />
@@ -171,8 +171,8 @@ export default function HomePage() {
               const Icon = vegIconMap[v.icon];
               return (
                 <StaggerItem key={v.slug}>
-                  <div className="flex h-full flex-col items-center rounded-xl2 border border-forest-700/10 bg-cream-50 px-4 py-8 text-center transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-700/8 text-forest-700">
+                  <div className="flex h-full flex-col items-center rounded-xl2 border border-ink/10 bg-cream-50 px-4 py-8 text-center transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink/8 text-ink">
                       <Icon className="h-7 w-7" />
                     </span>
                     <p className="mt-4 text-sm font-semibold text-ink">{v.name}</p>
@@ -187,7 +187,7 @@ export default function HomePage() {
       <ProcessScroll />
 
       {/* SECTEURS CLIENTS */}
-      <section className="bg-forest-900 py-24 sm:py-32">
+      <section className="bg-ink py-24 sm:py-32">
         <div className="container-page">
           <SectionHeading
             eyebrow="Nos clients"
@@ -250,11 +250,11 @@ export default function HomePage() {
                 <div className="group relative h-full overflow-hidden rounded-xl3 bg-cream-50 p-8 shadow-soft transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-lifted sm:p-10">
                   <span
                     aria-hidden
-                    className="absolute -right-6 -top-6 text-clay-400/[0.07] transition-transform duration-500 ease-premium group-hover:scale-110 group-hover:rotate-6"
+                    className="absolute -right-6 -top-6 text-orange-500/[0.07] transition-transform duration-500 ease-premium group-hover:scale-110 group-hover:rotate-6"
                   >
                     <v.icon className="h-32 w-32" />
                   </span>
-                  <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-clay-400/10 text-clay-400">
+                  <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-orange-500/10 text-orange-500">
                     <v.icon className="h-7 w-7" />
                   </span>
                   <h3 className="relative mt-7 font-display text-2xl font-medium text-ink">
@@ -274,7 +274,7 @@ export default function HomePage() {
       <section className="bg-cream-200 pb-24 sm:pb-32">
         <div className="container-page">
           <Reveal>
-            <div className="relative overflow-hidden rounded-xl3 bg-clay-400 px-8 py-16 text-center sm:px-16 sm:py-20">
+            <div className="relative overflow-hidden rounded-xl3 bg-orange-500 px-8 py-16 text-center sm:px-16 sm:py-20">
               <div
                 aria-hidden
                 className="veg-divider pointer-events-none absolute inset-0 opacity-[0.08]"
@@ -289,7 +289,7 @@ export default function HomePage() {
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-cream-50 px-7 py-3.5 text-sm font-semibold text-clay-500 shadow-lifted transition-transform duration-300 ease-premium hover:scale-[1.03] active:scale-[0.98]"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-cream-50 px-7 py-3.5 text-sm font-semibold text-orange-600 shadow-lifted transition-transform duration-300 ease-premium hover:scale-[1.03] active:scale-[0.98]"
                 >
                   Demander un devis
                   <IconArrowRight className="h-4 w-4" />

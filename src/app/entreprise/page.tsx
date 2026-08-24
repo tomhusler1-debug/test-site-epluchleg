@@ -44,7 +44,7 @@ export default function EntreprisePage() {
         <div className="container-page grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <Reveal>
-              <span className="text-xs font-semibold uppercase tracking-wider text-clay-500">
+              <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
                 Notre métier
               </span>
             </Reveal>
@@ -70,8 +70,8 @@ export default function EntreprisePage() {
           </div>
 
           <Reveal delay={0.2}>
-            <div className="rounded-xl3 bg-forest-800 p-8 sm:p-10">
-              <p className="text-sm font-semibold uppercase tracking-wider text-clay-200">
+            <div className="rounded-xl3 bg-beige-800 p-8 sm:p-10">
+              <p className="text-sm font-semibold uppercase tracking-wider text-orange-200">
                 En bref
               </p>
               <dl className="mt-6 space-y-5">
@@ -109,7 +109,7 @@ export default function EntreprisePage() {
             {commitments.map((c) => (
               <StaggerItem key={c.title}>
                 <div className="h-full rounded-xl2 bg-cream-50 p-7 shadow-soft">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-700/10 text-forest-700">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-ink/10 text-ink">
                     <c.icon className="h-6 w-6" />
                   </span>
                   <h3 className="mt-6 font-display text-lg font-medium text-ink">{c.title}</h3>
@@ -138,9 +138,9 @@ export default function EntreprisePage() {
                 {cities.map((c) => (
                   <li
                     key={c.name}
-                    className="flex items-center gap-2 rounded-full border border-forest-700/15 bg-cream-50 px-4 py-2.5 text-sm font-medium text-ink-light"
+                    className="flex items-center gap-2 rounded-full border border-ink/15 bg-cream-50 px-4 py-2.5 text-sm font-medium text-ink-light"
                   >
-                    <IconPin className="h-4 w-4 text-clay-400" />
+                    <IconPin className="h-4 w-4 text-orange-500" />
                     {c.name}
                   </li>
                 ))}

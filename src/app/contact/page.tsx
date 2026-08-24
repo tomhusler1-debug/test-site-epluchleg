@@ -24,8 +24,8 @@ export default function ContactPage() {
         <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <div className="space-y-8">
             <Reveal>
-              <div className="rounded-xl3 bg-forest-800 p-8 sm:p-9">
-                <p className="text-sm font-semibold uppercase tracking-wider text-clay-200">
+              <div className="rounded-xl3 bg-beige-800 p-8 sm:p-9">
+                <p className="text-sm font-semibold uppercase tracking-wider text-orange-200">
                   Coordonnées
                 </p>
                 <dl className="mt-6 space-y-5 text-cream-100">
@@ -34,7 +34,7 @@ export default function ContactPage() {
                     <dd className="mt-1">
                       <a
                         href={`tel:${company.phone.replace(/\s/g, "")}`}
-                        className="font-display text-xl transition-colors hover:text-clay-200"
+                        className="font-display text-xl transition-colors hover:text-orange-200"
                       >
                         {company.phone}
                       </a>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                     <dd className="mt-1">
                       <a
                         href={`mailto:${company.email}`}
-                        className="font-display text-xl transition-colors hover:text-clay-200"
+                        className="font-display text-xl transition-colors hover:text-orange-200"
                       >
                         {company.email}
                       </a>
@@ -60,8 +60,8 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="rounded-xl3 border border-forest-700/10 bg-cream-50 p-8 sm:p-9">
-                <div className="flex items-center gap-2.5 text-forest-700">
+              <div className="rounded-xl3 border border-ink/10 bg-cream-50 p-8 sm:p-9">
+                <div className="flex items-center gap-2.5 text-ink">
                   <IconClock className="h-5 w-5" />
                   <p className="text-sm font-semibold uppercase tracking-wider">Disponibilité</p>
                 </div>
@@ -73,8 +73,8 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.16}>
-              <div className="rounded-xl3 border border-forest-700/10 bg-cream-50 p-8 sm:p-9">
-                <div className="flex items-center gap-2.5 text-forest-700">
+              <div className="rounded-xl3 border border-ink/10 bg-cream-50 p-8 sm:p-9">
+                <div className="flex items-center gap-2.5 text-ink">
                   <IconPin className="h-5 w-5" />
                   <p className="text-sm font-semibold uppercase tracking-wider">
                     Zone d&apos;intervention
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   {cities.map((c) => (
                     <span
                       key={c.name}
-                      className="rounded-full bg-forest-700/8 px-3.5 py-1.5 text-sm font-medium text-forest-700"
+                      className="rounded-full bg-ink/8 px-3.5 py-1.5 text-sm font-medium text-ink"
                     >
                       {c.name}
                     </span>
@@ -95,11 +95,11 @@ export default function ContactPage() {
           </div>
 
           <Reveal delay={0.1}>
-            <div className="rounded-xl3 border border-forest-700/10 bg-cream-50 p-8 shadow-soft sm:p-10">
+            <div className="rounded-xl3 border border-ink/10 bg-cream-50 p-8 shadow-soft sm:p-10">
               <h2 className="font-display text-2xl font-medium text-ink">Demande de devis</h2>
               <p className="mt-2 text-ink-muted">
                 Tous les champs marqués d&apos;un{" "}
-                <span className="text-clay-500">*</span> sont obligatoires.
+                <span className="text-orange-600">*</span> sont obligatoires.
               </p>
               <div className="mt-8">
                 <ContactForm />

@@ -13,11 +13,11 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-clay-400 text-cream-100 hover:bg-clay-500 shadow-soft hover:shadow-card",
+    "bg-orange-500 text-cream-100 hover:bg-orange-600 shadow-soft hover:shadow-card",
   secondary:
-    "bg-forest-700 text-cream-100 hover:bg-forest-800 shadow-soft hover:shadow-card",
+    "bg-ink text-cream-100 hover:bg-beige-800 shadow-soft hover:shadow-card",
   ghost:
-    "bg-transparent text-forest-700 border border-forest-700/25 hover:border-forest-700 hover:bg-forest-700/5",
+    "bg-transparent text-ink border border-ink/25 hover:border-ink hover:bg-ink/5",
 };
 
 export function Button({

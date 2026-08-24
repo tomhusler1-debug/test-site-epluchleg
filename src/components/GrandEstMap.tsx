@@ -17,16 +17,16 @@ export function GrandEstMap() {
       >
         <path
           d="M8 22 C4 15, 10 6, 20 5 C28 1, 40 3, 48 8 C58 4, 72 6, 80 12 C90 14, 96 24, 92 34 C96 42, 90 52, 80 56 C76 66, 62 72, 50 68 C40 74, 24 72, 16 62 C6 60, 2 48, 8 40 C2 34, 3 26, 8 22 Z"
-          fill="#25402a"
-          fillOpacity={0.08}
-          stroke="#25402a"
+          fill="#4F3E28"
+          fillOpacity={0.1}
+          stroke="#4F3E28"
           strokeOpacity={0.35}
           strokeWidth={0.5}
         />
         <path
           d="M8 22 C4 15, 10 6, 20 5 C28 1, 40 3, 48 8 C58 4, 72 6, 80 12 C90 14, 96 24, 92 34 C96 42, 90 52, 80 56 C76 66, 62 72, 50 68 C40 74, 24 72, 16 62 C6 60, 2 48, 8 40 C2 34, 3 26, 8 22 Z"
           fill="none"
-          stroke="#C4622D"
+          stroke="#F08A00"
           strokeOpacity={0.25}
           strokeWidth={0.35}
           strokeDasharray="0.6 1.6"
@@ -55,15 +55,15 @@ export function GrandEstMap() {
             <span
               className={`mb-1 whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-medium tracking-tight shadow-soft transition-all duration-200 ${
                 active === city.name
-                  ? "bg-forest-700 text-cream-100 opacity-100"
+                  ? "bg-orange-500 text-cream-100 opacity-100"
                   : "bg-cream-50 text-ink opacity-90"
               }`}
             >
               {city.name}
             </span>
             <span className="relative flex h-3 w-3 items-center justify-center">
-              <span className="absolute h-3 w-3 animate-ping rounded-full bg-clay-400/60" />
-              <IconPin className="h-5 w-5 -translate-y-1 text-clay-400 drop-shadow-sm" />
+              <span className="absolute h-3 w-3 animate-ping rounded-full bg-orange-500/60" />
+              <IconPin className="h-5 w-5 -translate-y-1 text-orange-500 drop-shadow-sm" />
             </span>
           </motion.span>
         </button>

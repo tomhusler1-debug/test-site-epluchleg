@@ -8,7 +8,7 @@ import { IconCheck } from "./icons";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClasses =
-  "w-full rounded-xl border border-forest-700/15 bg-cream-50 px-4 py-3.5 text-[0.95rem] text-ink placeholder:text-ink-muted/50 transition-colors duration-200 focus:border-forest-700 focus:outline-none";
+  "w-full rounded-xl border border-ink/15 bg-cream-50 px-4 py-3.5 text-[0.95rem] text-ink placeholder:text-ink-muted/50 transition-colors duration-200 focus:border-ink focus:outline-none";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -61,10 +61,10 @@ export function ContactForm() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="flex h-full min-h-[420px] flex-col items-center justify-center rounded-xl3 border border-forest-700/10 bg-cream-50 p-10 text-center"
+        className="flex h-full min-h-[420px] flex-col items-center justify-center rounded-xl3 border border-ink/10 bg-cream-50 p-10 text-center"
         role="status"
       >
-        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-700 text-cream-100">
+        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-cream-100">
           <IconCheck className="h-7 w-7" />
         </span>
         <h3 className="mt-6 font-display text-2xl font-medium text-ink">Message envoyé</h3>
@@ -87,7 +87,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="text-sm font-medium text-ink">
-            Nom complet <span className="text-clay-500">*</span>
+            Nom complet <span className="text-orange-600">*</span>
           </label>
           <input
             id="name"
@@ -117,7 +117,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="email" className="text-sm font-medium text-ink">
-            Email <span className="text-clay-500">*</span>
+            Email <span className="text-orange-600">*</span>
           </label>
           <input
             id="email"
@@ -163,7 +163,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="text-sm font-medium text-ink">
-          Votre besoin <span className="text-clay-500">*</span>
+          Votre besoin <span className="text-orange-600">*</span>
         </label>
         <textarea
           id="message"
@@ -183,7 +183,7 @@ export function ContactForm() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             role="alert"
-            className="rounded-xl bg-clay-50 px-4 py-3 text-sm text-clay-600"
+            className="rounded-xl bg-orange-50 px-4 py-3 text-sm text-orange-700"
           >
             {errorMessage} Vous pouvez aussi nous joindre au{" "}
             <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="font-semibold underline">
@@ -197,7 +197,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-full items-center justify-center rounded-full bg-clay-400 px-6 py-4 text-sm font-semibold text-cream-100 shadow-soft transition-all duration-300 ease-premium hover:bg-clay-500 hover:shadow-card disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-6 py-4 text-sm font-semibold text-cream-100 shadow-soft transition-all duration-300 ease-premium hover:bg-orange-600 hover:shadow-card disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === "submitting" ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>

@@ -40,7 +40,7 @@ export function StatCounter({ value, label, delay = 0 }: StatCounterProps) {
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       className="text-center sm:text-left"
     >
-      <p className="font-display text-4xl font-medium text-forest-700 sm:text-5xl">
+      <p className="font-display text-4xl font-medium text-orange-600 sm:text-5xl">
         {Number.isNaN(numeric) ? value : display}
         {suffix}
       </p>

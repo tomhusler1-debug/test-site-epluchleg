@@ -55,7 +55,7 @@ export function CustomCursor() {
       style={{ opacity: visible ? 1 : 0, transition: "opacity 0.25s ease" }}
     >
       <motion.div
-        className="fixed left-0 top-0 h-1.5 w-1.5 rounded-full bg-clay-400 mix-blend-difference"
+        className="fixed left-0 top-0 h-1.5 w-1.5 rounded-full bg-orange-500 mix-blend-difference"
         style={{ x, y, translateX: "-50%", translateY: "-50%" }}
       />
       <motion.div

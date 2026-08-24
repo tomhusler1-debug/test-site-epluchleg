@@ -11,7 +11,7 @@ type SectorCardProps = {
 export function SectorCard({ icon: Icon, name, description, index }: SectorCardProps) {
   return (
     <StaggerItem>
-      <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl2 bg-forest-800 p-7 text-cream-100 transition-all duration-300 ease-premium hover:-translate-y-1 hover:bg-forest-700">
+      <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl2 bg-beige-800 p-7 text-cream-100 transition-all duration-300 ease-premium hover:-translate-y-1 hover:bg-beige-700">
         <div className="flex items-start justify-between">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cream-100/10 text-cream-100">
             <Icon className="h-6 w-6" />

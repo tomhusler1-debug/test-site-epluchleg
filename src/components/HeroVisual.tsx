@@ -10,7 +10,7 @@ export function HeroVisual() {
         initial={{ scale: 0.85, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-[6%] rounded-[42%_58%_65%_35%/45%_38%_62%_55%] bg-gradient-to-br from-forest-600 via-forest-700 to-forest-900 shadow-lifted"
+        className="absolute inset-[6%] rounded-[42%_58%_65%_35%/45%_38%_62%_55%] bg-gradient-to-br from-beige-400 via-beige-700 to-ink shadow-lifted"
       />
       <motion.div
         animate={{ rotate: 360 }}
@@ -26,7 +26,7 @@ export function HeroVisual() {
       <motion.span
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute left-[8%] top-[14%] flex h-16 w-16 items-center justify-center rounded-full bg-cream-50 text-clay-400 shadow-card sm:h-20 sm:w-20"
+        className="absolute left-[8%] top-[14%] flex h-16 w-16 items-center justify-center rounded-full bg-cream-50 text-orange-500 shadow-card sm:h-20 sm:w-20"
       >
         <IconPotato className="h-9 w-9 sm:h-11 sm:w-11" />
       </motion.span>
@@ -34,7 +34,7 @@ export function HeroVisual() {
       <motion.span
         animate={{ y: [0, 12, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
-        className="absolute right-[6%] top-[30%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-clay-400 shadow-card sm:h-16 sm:w-16"
+        className="absolute right-[6%] top-[30%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-orange-500 shadow-card sm:h-16 sm:w-16"
       >
         <IconCarrot className="h-7 w-7 sm:h-8 sm:w-8" />
       </motion.span>
@@ -42,7 +42,7 @@ export function HeroVisual() {
       <motion.span
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        className="absolute bottom-[16%] left-[4%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-forest-700 shadow-card sm:h-16 sm:w-16"
+        className="absolute bottom-[16%] left-[4%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-orange-500 shadow-card sm:h-16 sm:w-16"
       >
         <IconLeek className="h-7 w-7 sm:h-8 sm:w-8" />
       </motion.span>
@@ -53,7 +53,7 @@ export function HeroVisual() {
         transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="absolute -bottom-2 right-[8%] flex items-center gap-3 rounded-2xl bg-cream-50/95 px-4 py-3.5 shadow-lifted backdrop-blur"
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest-700/10 text-forest-700">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink/10 text-ink">
           <IconSnowflake className="h-4.5 w-4.5" />
         </span>
         <div>
@@ -68,7 +68,7 @@ export function HeroVisual() {
         transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="absolute -top-2 left-[2%] flex items-center gap-3 rounded-2xl bg-cream-50/95 px-4 py-3.5 shadow-lifted backdrop-blur sm:left-[-4%]"
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-clay-400/12 text-clay-400">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-500/12 text-orange-500">
           <IconTruck className="h-4.5 w-4.5" />
         </span>
         <div>

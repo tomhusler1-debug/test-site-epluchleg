@@ -5,43 +5,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forest: {
-          50: "#eef3ee",
-          100: "#d7e3d6",
-          200: "#b0c7ae",
-          300: "#87a884",
-          400: "#5f8a5c",
-          500: "#436a41",
-          600: "#31512f",
-          700: "#25402a", // deep primary
-          800: "#1c3121",
-          900: "#132318",
-          950: "#0b1610",
+        // Brand accent — extracted from the EPLUCH'LEG logo (#F08A00 = orange-500).
+        // Used sparingly: CTAs, active states, key numbers. Never a large flat area.
+        orange: {
+          50: "#FFF6E9",
+          100: "#FFE7C2",
+          200: "#FFCE85",
+          300: "#FFB246",
+          400: "#FA9C1A",
+          500: "#F08A00",
+          600: "#CC7300",
+          700: "#A55D00",
+          800: "#7D4700",
+        },
+        // Secondary — warm sand/taupe. Structure: cards, alternating sections,
+        // secondary buttons, and (800) the mid-dark surfaces.
+        beige: {
+          50: "#FBF7F0",
+          100: "#F3EAD9",
+          200: "#E8D8BE",
+          300: "#DAC29E",
+          400: "#C7A87C",
+          500: "#B08D5C",
+          600: "#8F7148",
+          700: "#705838",
+          800: "#4F3E28",
         },
         cream: {
           DEFAULT: "#F7F4EC",
           50: "#FFFFFF",
-          100: "#FBFAF5",
-          200: "#F7F4EC",
-          300: "#EFE9D8",
+          100: "#FBF8F2",
+          200: "#F6F1E6",
+          300: "#EDE4CF",
           400: "#E4DBC0",
         },
-        clay: {
-          50: "#FBEDE3",
-          100: "#F5D5BE",
-          200: "#EBB088",
-          300: "#DD8C58",
-          400: "#C4622D",
-          500: "#A94F22",
-          600: "#8A3F1B",
-          700: "#6B3115",
-        },
         ink: {
-          DEFAULT: "#1B2118",
-          light: "#3C463A",
-          // Darkened from #6B7568 — the lighter value sat just under 4.5:1
-          // against the cream backgrounds it's used on, failing WCAG AA for
-          // body-sized text. This keeps the muted feel with real contrast.
+          DEFAULT: "#241C14",
+          light: "#453A2C",
+          // Kept at the WCAG-fixed value (was #6B7568 pre-fix): #746650 reads
+          // clearly on white but drops under 4.5:1 on the cream-200/300
+          // section backgrounds this token is used on for body text.
           muted: "#5A5145",
         },
       },

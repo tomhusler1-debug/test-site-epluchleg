@@ -49,12 +49,12 @@ export default function SecteursPage() {
             return (
               <Reveal key={sector.slug} delay={Math.min(i * 0.05, 0.2)}>
                 <div
-                  className={`flex flex-col gap-8 rounded-xl3 border border-forest-700/10 bg-cream-50 p-8 sm:p-10 lg:flex-row lg:items-center lg:gap-14 ${
+                  className={`flex flex-col gap-8 rounded-xl3 border border-ink/10 bg-cream-50 p-8 sm:p-10 lg:flex-row lg:items-center lg:gap-14 ${
                     reversed ? "lg:flex-row-reverse" : ""
                   }`}
                 >
                   <div className="flex shrink-0 items-center gap-5 lg:w-64">
-                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-forest-700 text-cream-100">
+                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-ink text-cream-100">
                       <Icon className="h-8 w-8" />
                     </span>
                     <h2 className="font-display text-xl font-medium text-ink lg:hidden">
@@ -71,7 +71,7 @@ export default function SecteursPage() {
                     <ul className="mt-5 grid gap-2.5 sm:grid-cols-3">
                       {sector.points.map((p) => (
                         <li key={p} className="flex items-start gap-2.5 text-sm text-ink-light">
-                          <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-clay-400" />
+                          <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
                           <span className="leading-snug">{p}</span>
                         </li>
                       ))}
@@ -96,7 +96,7 @@ export default function SecteursPage() {
             {process.map((p, i) => (
               <Reveal key={p.step} delay={i * 0.1}>
                 <div className="text-center sm:text-left">
-                  <span className="font-display text-4xl font-light text-forest-700/20">
+                  <span className="font-display text-4xl font-light text-ink/10">
                     {p.step}
                   </span>
                   <h3 className="mt-3 font-display text-lg font-medium text-ink">{p.title}</h3>

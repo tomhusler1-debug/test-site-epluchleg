@@ -17,11 +17,11 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="bg-forest-900 text-cream-200">
+    <footer className="bg-ink text-cream-200">
       <div className="container-page grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr] lg:py-24">
         <div>
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream-100 text-forest-800">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream-100 text-orange-500">
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 21c-4-3-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-3 8-7 11z" />
                 <path d="M12 21V10" />
@@ -48,7 +48,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-[0.95rem] text-cream-300/85 transition-colors hover:text-clay-200"
+                    className="text-[0.95rem] text-cream-300/85 transition-colors hover:text-orange-200"
                   >
                     {l.label}
                   </Link>
@@ -65,7 +65,7 @@ export function Footer() {
           <ul className="mt-5 space-y-2.5">
             {cities.map((c) => (
               <li key={c.name} className="flex items-center gap-2 text-[0.95rem] text-cream-300/85">
-                <IconPin className="h-3.5 w-3.5 shrink-0 text-clay-300" />
+                <IconPin className="h-3.5 w-3.5 shrink-0 text-orange-300" />
                 {c.name}
               </li>
             ))}
