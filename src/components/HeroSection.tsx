@@ -44,11 +44,11 @@ export function HeroSection() {
             </span>
           </Reveal>
 
-          <h1 className="mt-6 text-display-xl font-display font-medium text-ink text-balance">
-            <KineticText as="div" text="Le légume transformé," delay={0.15} />
+          <h1 className="mt-6 text-display-lg font-display font-medium text-ink text-balance">
+            <KineticText as="div" text="Un légume épluché," delay={0.15} />
             <KineticText
               as="div"
-              text="prêt à l'emploi."
+              text="c'est une heure de cuisine en moins."
               delay={0.42}
               className="italic text-forest-700"
             />
@@ -56,9 +56,8 @@ export function HeroSection() {
 
           <Reveal delay={0.75}>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-muted">
-              EPLUCH&apos;LEG épluche, découpe et prépare pommes de terre et légumes frais pour
-              les professionnels de la restauration et de l&apos;industrie agroalimentaire —
-              de Strasbourg à Metz.
+              EPLUCH&apos;LEG épluche, découpe et prépare vos légumes pour que votre équipe
+              cuisine, plutôt qu&apos;elle n&apos;épluche.
             </p>
           </Reveal>
 
