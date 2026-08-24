@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -45,16 +46,15 @@ export function Header() {
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5" aria-label="EPLUCH'LEG — Accueil">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-500 text-cream-100">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 21c-4-3-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-3 8-7 11z" />
-              <path d="M12 21V10" />
-            </svg>
-          </span>
-          <span className="font-display text-lg font-medium tracking-tight text-ink">
-            EPLUCH&apos;LEG
-          </span>
+        <Link href="/" className="flex items-center" aria-label="EPLUCH'LEG — Accueil">
+          <Image
+            src="/images/logo.jpg"
+            alt="EPLUCH'LEG"
+            width={220}
+            height={49}
+            priority
+            className="h-8 w-auto mix-blend-multiply sm:h-9"
+          />
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex" aria-label="Navigation principale">

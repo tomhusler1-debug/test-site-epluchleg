@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { IconCarrot, IconLeek, IconPotato, IconSnowflake, IconTruck } from "./icons";
+import { IconCarrot, IconLeek, IconShield, IconSnowflake, IconTruck } from "./icons";
 
 export function HeroVisual() {
   return (
@@ -23,12 +24,28 @@ export function HeroVisual() {
         }}
       />
 
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, rotate: -6 }}
+        animate={{ opacity: 1, scale: 1, rotate: -6 }}
+        transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute left-1/2 top-1/2 h-[62%] w-[62%] -translate-x-1/2 -translate-y-1/2"
+      >
+        <Image
+          src="/images/potato-hero.png"
+          alt="Pomme de terre EPLUCH'LEG"
+          fill
+          sizes="(max-width: 640px) 280px, 400px"
+          className="object-contain drop-shadow-[0_30px_40px_rgba(36,28,20,0.35)]"
+          priority
+        />
+      </motion.div>
+
       <motion.span
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute left-[8%] top-[14%] flex h-16 w-16 items-center justify-center rounded-full bg-cream-50 text-orange-500 shadow-card sm:h-20 sm:w-20"
       >
-        <IconPotato className="h-9 w-9 sm:h-11 sm:w-11" />
+        <IconShield className="h-9 w-9 sm:h-11 sm:w-11" />
       </motion.span>
 
       <motion.span
@@ -42,7 +59,7 @@ export function HeroVisual() {
       <motion.span
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        className="absolute bottom-[16%] left-[4%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-orange-500 shadow-card sm:h-16 sm:w-16"
+        className="absolute bottom-[16%] left-[4%] flex h-14 w-14 items-center justify-center rounded-full bg-cream-50 text-ink shadow-card sm:h-16 sm:w-16"
       >
         <IconLeek className="h-7 w-7 sm:h-8 sm:w-8" />
       </motion.span>
@@ -53,7 +70,7 @@ export function HeroVisual() {
         transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="absolute -bottom-2 right-[8%] flex items-center gap-3 rounded-2xl bg-cream-50/95 px-4 py-3.5 shadow-lifted backdrop-blur"
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink/10 text-ink">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-500/12 text-orange-500">
           <IconSnowflake className="h-4.5 w-4.5" />
         </span>
         <div>

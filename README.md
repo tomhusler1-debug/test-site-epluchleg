@@ -49,11 +49,15 @@ Certaines informations n'ont pas été fournies et ont été temporairement comp
 site soit complet et cohérent. À vérifier/remplacer avant publication :
 
 - **Coordonnées** (`src/lib/data.ts`) : téléphone, email et adresse sont des valeurs provisoires.
-- **Photographies** : l'environnement de génération n'a pas d'accès internet, donc le site utilise
-  uniquement des compositions graphiques/animations (aucune photo). Ajouter de vraies photos
-  (atelier, produits, équipe) renforcerait encore la crédibilité — pour les intégrer, remplacer les
-  compositions dans `HeroVisual.tsx` et les sections concernées par des `<Image>` (`next/image`)
-  pointant vers vos fichiers dans `public/`.
+- **Photographies** : le logo réel et quelques photos d'atelier sont intégrés (`public/images/`) —
+  logo dans le header/footer, photo de pomme de terre dans le hero, 3 photos d'atelier sur la page
+  Entreprise. Deux fichiers générés par IA (`Gemini_Generated_Image_*.jpg`) sont conservés dans
+  `public/images/` mais **non utilisés** : ils affichaient un nom de marque fictif ("Terroirs") et
+  du texte illisible sur les sachets, incompatibles avec le site. Des photos supplémentaires
+  (équipe, autres légumes, camions) renforceraient encore la page Entreprise/Secteurs — à ajouter
+  dans `public/images/` puis référencer via `<Image>` (`next/image`).
+  Vérifiez aussi les droits d'usage du fichier `potato-hero.png` (récupéré sur Pngtree) avant mise
+  en production définitive si sa licence n'est pas déjà acquise.
 - **Certifications qualité** : la page Entreprise reste volontairement générique sur l'hygiène et
   la qualité (aucune certification — HACCP, IFS, BRC... — n'a été confirmée). À préciser si
   applicable.

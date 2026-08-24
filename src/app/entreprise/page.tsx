@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GrandEstMap } from "@/components/GrandEstMap";
@@ -97,6 +98,28 @@ export default function EntreprisePage() {
         </div>
       </section>
 
+      {/* PHOTO — ATELIER */}
+      <section className="bg-cream-100 pb-20 sm:pb-28">
+        <div className="container-page">
+          <Reveal>
+            <div className="relative aspect-[16/8] overflow-hidden rounded-xl3 shadow-lifted sm:aspect-[16/7]">
+              <Image
+                src="/images/atelier-tri.jpg"
+                alt="Ligne de tri et de contrôle qualité en atelier"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1200px"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 to-transparent p-6 sm:p-8">
+                <p className="font-display text-lg text-cream-50 sm:text-xl">
+                  Tri et contrôle qualité, avant chaque conditionnement.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ENGAGEMENTS */}
       <section className="bg-cream-200 py-20 sm:py-28">
         <div className="container-page">
@@ -118,6 +141,31 @@ export default function EntreprisePage() {
               </StaggerItem>
             ))}
           </StaggerGroup>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2">
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl3 shadow-card">
+                <Image
+                  src="/images/atelier-inspection.jpg"
+                  alt="Inspection des pommes de terre à la réception"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl3 shadow-card">
+                <Image
+                  src="/images/atelier-controle-qualite.jpg"
+                  alt="Contrôle qualité en laboratoire"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

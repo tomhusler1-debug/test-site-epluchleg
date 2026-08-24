@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company, cities } from "@/lib/data";
 import { IconPin } from "./icons";
 
@@ -20,16 +21,8 @@ export function Footer() {
     <footer className="bg-ink text-cream-200">
       <div className="container-page grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr] lg:py-24">
         <div>
-          <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream-100 text-orange-500">
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 21c-4-3-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-3 8-7 11z" />
-                <path d="M12 21V10" />
-              </svg>
-            </span>
-            <span className="font-display text-lg font-medium tracking-tight text-cream-50">
-              EPLUCH&apos;LEG
-            </span>
+          <Link href="/" className="inline-flex items-center rounded-lg bg-cream-50 px-3 py-2">
+            <Image src="/images/logo.jpg" alt="EPLUCH'LEG" width={220} height={49} className="h-7 w-auto" />
           </Link>
           <p className="mt-5 max-w-sm text-[0.95rem] leading-relaxed text-cream-300/80">
             Transformation de légumes 4ᵉ et 5ᵉ gamme, expertise historique sur la pomme de terre,
